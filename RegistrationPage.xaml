@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="bmaservise.Views.RegistrationPage"
+    Shell.TabBarIsVisible="False"
+    Shell.NavBarIsVisible="False">
+
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="#373737">
+            <StackLayout Spacing="20" Padding="20" VerticalOptions="CenterAndExpand">
+                <Frame HasShadow="False" BackgroundColor="#262626" CornerRadius="15" Padding="20,20,20,25">
+                    <StackLayout Spacing="25" >
+                        <Label Text="Регистрация"
+                               HorizontalOptions="Center"
+                               FontSize="22" TextColor="White"/>
+                        <Entry Placeholder="Логин" FontSize="16"
+                               x:Name="EntryUserName" Grid.Row="0"
+                               BackgroundColor="#373737" TextColor="White"
+                               HeightRequest="40" />
+                
+                        <Entry Placeholder="Пароль" IsPassword="True"
+                               FontSize="16" x:Name="EntryUserPassword" Grid.Row="1"
+                               BackgroundColor="#373737" TextColor="White"
+                               HeightRequest="40"/>
+                
+                        <Entry Placeholder="Email" FontSize="16"
+                               x:Name="EntryUserEmail" Grid.Row="2"
+                               BackgroundColor="#373737" TextColor="White"
+                               HeightRequest="40"/>
+                
+                        <Entry Placeholder="Номер телефона" FontSize="16"
+                               x:Name="EntryUserPhoneNumber" Grid.Row="3"
+                               BackgroundColor="#373737" TextColor="White"
+                               Keyboard="Telephone" HeightRequest="40"/>
+                
+                        <Button Grid.Row="4" Text="Зарегистрироваться"
+                                HorizontalOptions="CenterAndExpand"
+                                WidthRequest="400" TextColor="White"
+                                BackgroundColor="#0068B7" CornerRadius="15"
+                                Clicked="Button_Clicked" FontSize="15">
+                        </Button>
+
+                        <Button Text="Отмена" FontSize="17"
+                                HorizontalOptions="CenterAndExpand"
+                                WidthRequest="80" TextColor="#FF2E00"
+                                BackgroundColor="Transparent" HeightRequest="25"
+                                Clicked= "Button_Clicked_1">
+                        </Button>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

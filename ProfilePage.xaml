@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bmaservise.Views.ProfilePage"
+             Title="Профиль">
+
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="#373737">
+            <StackLayout Padding="15">
+                <Frame HasShadow="False" BackgroundColor="#262626" CornerRadius="15" >
+                    <StackLayout>
+
+                        <StackLayout Padding="0,15,0,6">
+                            <Label Text="Фамилия" FontSize="Small" TextColor="#9B9B9B"/>
+                            <Entry Text="{Binding FLname, Mode=TwoWay}" TextColor="White"
+                                   BackgroundColor="#373737" HeightRequest="40"/>
+                        </StackLayout>
+
+                        <StackLayout Padding="0,15,0,6">
+                            <Label Text="Имя" FontSize="Small" TextColor="#9B9B9B"/>
+                            <Entry Text="{Binding FLname, Mode=TwoWay}" TextColor="White"
+                                   BackgroundColor="#373737" HeightRequest="40"/>
+                        </StackLayout>
+
+                        <StackLayout Padding="0,15,0,6">
+                            <Label Text="Отчество" FontSize="Small" TextColor="#9B9B9B"/>
+                            <Entry Text="{Binding FLname, Mode=TwoWay}" TextColor="White"
+                                   BackgroundColor="#373737" HeightRequest="40"/>
+                        </StackLayout>
+
+                        <StackLayout Padding="0,6">
+                            <Label Text="Номер телефона" FontSize="Small" TextColor="#9B9B9B"/>
+                            <Entry Text="{Binding PhoneNumber, Mode=TwoWay}" TextColor="White"
+                                   BackgroundColor="#373737" HeightRequest="40"
+                           Keyboard="Numeric"/>
+                        </StackLayout>
+
+                        <StackLayout Padding="0,6">
+                            <Label Text="Email" FontSize="Small" TextColor="#9B9B9B"/>
+                            <Entry Text="{Binding Email, Mode=TwoWay}" TextColor="White"
+                                   BackgroundColor="#373737" HeightRequest="40"/>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Button Text="Выйти из аккаунта"
+                                    BackgroundColor="Transparent"
+                                    TextColor="#FF2E00"
+                                    Clicked="Button_Clicked"/>
+                        </StackLayout>
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:bmaservise.Views"
+       Title="bmaservise"
+       x:Class="bmaservise.AppShell">
+
+     <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="#262626" />
+                <Setter Property="Shell.ForegroundColor" Value="#0085eb" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#9B9B9B" />
+                <Setter Property="Shell.UnselectedColor" Value="#9B9B9B" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#262626" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#9B9B9B"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="#0085eb"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <TabBar>
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
+        <ShellContent Route="RegistrationPage" ContentTemplate="{DataTemplate local:RegistrationPage}" />
+    </TabBar>
+    
+    <TabBar>
+        <ShellContent Title="Главная" Icon="main@4x.png" Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" />
+        <ShellContent Title="Запись" Icon="newappointment@4x.png" Route="NewAppointmentPage" ContentTemplate="{DataTemplate local:NewAppointmentPage}"/>
+        <ShellContent Title="История" Icon="history@4x.png" Route="HistoryPage" ContentTemplate="{DataTemplate local:HistoryPage}"/>
+        <ShellContent Title="Профиль" Icon="profile@4x.png" Route="ProfilePage" ContentTemplate="{DataTemplate local:ProfilePage}"/>
+    </TabBar>
+
+    
+
+</Shell>
+

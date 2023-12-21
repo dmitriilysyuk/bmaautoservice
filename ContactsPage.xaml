@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bmaservise.Views.ContactsPage"
+             BackgroundColor="#373737"
+             Title="Контакты">
+    <ContentPage.Content>
+        <ScrollView Margin="10">
+            <StackLayout>
+
+                <Frame HasShadow="False" BackgroundColor="#262626"
+                       CornerRadius="15" HeightRequest="200"
+                       IsClippedToBounds="True" Padding="0">
+                    <Image Source="Adress.jpg"
+                           Aspect="AspectFill" 
+                           Grid.Column="0" />
+                </Frame>
+
+                <Frame HasShadow="False" BackgroundColor="#262626" CornerRadius="15">
+                    <StackLayout>
+                        <Label Text="Адрес:" FontSize="15" TextColor="White"/>
+                        <Label Text="Бережковская наб., 36, Москва, 121059" FontSize="20" TextColor="White"/>
+                        <Label Text="&#10;Телефон:" FontSize="15" TextColor="White"/>
+                        <Label Text="+7 (495) 241-21-02" FontSize="20" TextColor="White"/>
+                    </StackLayout>
+                </Frame>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

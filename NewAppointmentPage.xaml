@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bmaservise.Views.NewAppointmentPage"
+             Title="Запись">
+
+    <ScrollView BackgroundColor="#373737" Padding="15" >
+        <StackLayout>
+            <Frame HasShadow="False" BackgroundColor="#262626" CornerRadius="15" >
+                <StackLayout Spacing="25">
+
+                    <StackLayout>
+                        <Label Text="Выберите дату" FontSize="Small" TextColor="#9B9B9B"/>
+                        <DatePicker BackgroundColor="#373737" HeightRequest="40" TextColor="White"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="Выберите время" FontSize="Small" TextColor="#9B9B9B"/>
+                        <TimePicker BackgroundColor="#373737" HeightRequest="40" TextColor="White"/>
+                    </StackLayout>
+                    <Picker Title="Выберите услугу" TitleColor="#9B9B9B" ItemsSource="{Binding ListAutoServices}"
+                            ItemDisplayBinding="{Binding Value}"
+                            TextColor="White" BackgroundColor="#373737"
+                            SelectedItem="{Binding AutoServiceText}" HeightRequest="40" x:Name="PickerService"/>
+
+                    <Entry FontSize="Medium"
+                           Placeholder="Введите марку и модель автомобиля"
+                           PlaceholderColor="#9B9B9B"
+                           ClearButtonVisibility="WhileEditing"
+                           HeightRequest="40"
+                           BackgroundColor="#373737"
+                           TextColor="White"
+                           x:Name="EntryCarModel"/>
+                
+                    <Entry FontSize="Medium" TextColor="White"
+                           Placeholder="Введите номер автомобиля"
+                           PlaceholderColor="#9B9B9B"
+                           ClearButtonVisibility="WhileEditing"
+                           HeightRequest="40"
+                           BackgroundColor="#373737"
+                           x:Name="EntryCarNumber"/>
+
+                    <Button Text="Записаться"
+                        Clicked="Button_Clicked"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="#0068B7"
+                        TextColor="White"
+                        CornerRadius="15">
+                    </Button>                               
+                
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+

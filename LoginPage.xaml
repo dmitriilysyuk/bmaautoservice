@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bmaservise.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
+
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="#373737">
+            <StackLayout Padding="20">
+                <Grid VerticalOptions="CenterAndExpand" RowSpacing="30">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="180"/>
+                        <RowDefinition/>
+                        <RowDefinition/>  
+                    </Grid.RowDefinitions>
+
+                    <Image Source="logobma.png" Grid.Row="0" VerticalOptions="EndAndExpand"/>
+                   
+                    <Frame HasShadow="False" BackgroundColor="#262626" CornerRadius="15" Grid.Row="1">
+                        <StackLayout Spacing="25">
+                            <Entry Placeholder="Логин"
+                                   x:Name="EntryUser"
+                                   BackgroundColor="#373737"
+                                   TextColor="White"
+                                   HeightRequest="40"/>
+
+                            <Entry Placeholder="Пароль"
+                                   x:Name="EntryPassword"
+                                   IsPassword="True"
+                                   BackgroundColor="#373737"
+                                   TextColor="White"
+                                   HeightRequest="40"/>
+                    
+                            <Button Clicked="Button_Clicked_1"
+                                    Text="Войти" FontSize="15"
+                                    BackgroundColor="#0068B7"
+                                    TextColor="White"
+                                    CornerRadius="15"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Button Text= "Регистрация" FontSize="17"
+                            BackgroundColor="Transparent"
+                            TextColor="#0085eb"
+                            HeightRequest="20" Grid.Row="2"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="StartAndExpand"
+                            Clicked="Button_Clicked" />
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bmaservise.Views.AboutPage"
+             BackgroundColor="#373737"
+             Title="О нас">
+
+    <ContentPage.Content>
+        <ScrollView Margin="10">
+            <StackLayout>
+                <Frame HasShadow="False" BackgroundColor="#262626" CornerRadius="15">
+                    <Label TextColor="White" Text="Автотехцентр «BMA-service» предлагает полный спектр услуг для владельцев транспортных средств немецких марок.
+&#10;&#10;Здесь работают опытные и квалифицированные мастера, которые выявят неполадки в машине, предложат варианты решения проблем и оперативно их устранят.
+&#10;&#10;Ожидая свой автомобиль, вам не придется скучать, ведь у нас есть комфортабельное кафе, где можно выпить чашку кофе…
+&#10;&#10;Мы гарантируем, что наши услуги будут оказаны быстро, качественно и по доступным ценам." FontSize="20"/>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

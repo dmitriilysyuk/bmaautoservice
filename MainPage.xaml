@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bmaservise.Views.MainPage"
+             BackgroundColor="#373737"
+             Title="Главная">
+
+    <ContentPage.Content>
+        <ScrollView Margin="15" >
+            <StackLayout Spacing="25">
+                <Grid BackgroundColor="#373737" RowSpacing="15">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="200"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" ColumnSpacing="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <ImageButton Grid.Column="0" CornerRadius="15"
+                                     BackgroundColor="#262626" Source="info.png"
+                                     Clicked="ImageButton_Clicked_2"/>   
+                    
+                        <ImageButton Grid.Column="1" CornerRadius="15"
+                                     BackgroundColor="#262626" Source="TO1.png"
+                                     Clicked="ImageButton_Clicked"/>
+                         
+                    </Grid>
+
+                    <ImageButton Grid.Row="1" HeightRequest="150" CornerRadius="15"
+                                 BackgroundColor="#262626" Source="prices.png"
+                                 Clicked="ImageButton_Clicked_3"/>
+             
+                    <ImageButton Grid.Row="2" Source="contacts1.png" CornerRadius="15"
+                                 BackgroundColor="#262626" Clicked="ImageButton_Clicked_1"/>
+                     
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
